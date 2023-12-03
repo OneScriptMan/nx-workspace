@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { UserApiService } from '@org/data-access';
 import { IUsers } from '@org/data-access';
 import { Subscription } from 'rxjs';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'org-feature-users-list',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, MatCardModule, MatButtonModule],
   templateUrl: './feature-users-list.component.html',
   styleUrl: './feature-users-list.component.css',
 })
