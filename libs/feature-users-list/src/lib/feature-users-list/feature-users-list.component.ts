@@ -38,7 +38,7 @@ export class FeatureUsersListComponent implements OnInit, OnDestroy {
   deleteUser(userToDelete: IUsers): void {
     if (this.users) {
       this.users = this.users.filter((user) => user.id !== userToDelete.id);
-      console.log(this.users);
+      
     }
   }
 
