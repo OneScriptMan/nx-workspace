@@ -1,7 +1,7 @@
 {
   "name": "feature-users-list",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/users/src",
+  "sourceRoot": "libs/feature-users-list/src",
   "prefix": "org",
   "tags": [],
   "projectType": "library",
@@ -10,14 +10,17 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "libs/users/jest.config.ts"
+        "jestConfig": "libs/feature-users-list/jest.config.ts"
       }
     },
     "lint": {
       "executor": "@nx/eslint:lint",
       "outputs": ["{options.outputFile}"],
       "options": {
-        "lintFilePatterns": ["libs/users//**/*.ts", "libs/users//**/*.html"]
+        "lintFilePatterns": [
+          "libs/feature-users-list//**/*.ts",
+          "libs/feature-users-list//**/*.html"
+        ]
       }
     }
   }

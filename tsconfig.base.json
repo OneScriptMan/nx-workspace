@@ -16,7 +16,7 @@
     "baseUrl": ".",
     "paths": {
       "@org/data-access": ["libs/data-access/src/index.ts"],
-      "@org/feature-users-list": ["libs/users/src/index.ts"]
+      "@org/feature-users-list": ["libs/feature-users-list/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
