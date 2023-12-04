@@ -9,7 +9,7 @@ export interface IUsers {
   company: IUserCompany;
 }
 
-export interface IUsersAddress {
+interface IUsersAddress {
   street: string;
   suite: string;
   city: string;
@@ -17,12 +17,12 @@ export interface IUsersAddress {
   geo: IUsersAddressGeo;
 }
 
-export interface IUsersAddressGeo {
+interface IUsersAddressGeo {
   lat: string;
   lng: string;
 }
 
-export interface IUserCompany {
+interface IUserCompany {
   name: string;
   catchPhrase: string;
   bs: string;

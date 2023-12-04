@@ -19,21 +19,32 @@ export class FeatureUsersListComponent implements OnInit, OnDestroy {
   users: IUsers[] | null = null;
   usersSubscription: Subscription = new Subscription();
 
+  /**
+   * Initializes the component and subscribes to the `getUsers` method of the `userApiService`.
+   * Updates the `users` property with the received data.
+   */
   ngOnInit(): void {
     this.usersSubscription = this.userApiService
       .getUsers()
       .subscribe((data) => {
         this.users = data;
-        console.log(this.users);
       });
   }
 
+  /**
+   * Deletes a user from the list of users.
+   * @param {IUsers} userToDelete - The user to be deleted.
+   */
   deleteUser(userToDelete: IUsers): void {
     if (this.users) {
       this.users = this.users.filter((user) => user.id !== userToDelete.id);
       console.log(this.users);
     }
   }
+
+  /**
+   * Destroys the component and unsubscribes from the usersSubscription.
+   */
   ngOnDestroy(): void {
     this.usersSubscription.unsubscribe();
   }
